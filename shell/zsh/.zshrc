@@ -1,3 +1,5 @@
+#####  from myself, for myself, with love  #####
+#
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -38,7 +40,7 @@ POWERLEVEL9K_PUBLIC_IP="%F{059}"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -59,7 +61,7 @@ DISABLE_UPDATE_PROMPT="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -75,7 +77,14 @@ COMPLETION_WAITING_DOTS="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-#HIST_STAMPS="dd-mm-yyyy"
+HIST_STAMPS="dd.mm.yyyy"
+
+# for setting history length see HISTSIZE and HISTFILESIZE imported from bash
+export SAVEHIST=$HISTSIZE
+export HISTFILE="$HOME/.zsh_history"
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -138,30 +147,18 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-export SAVEHIST=$HISTSIZE
-export HISTFILE="$HOME/.zsh_history"
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
-
-
-# make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-
-# enable color support of ls and also add handy aliases
+# enable color support of ls / grep and also add handy aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
 
 # some more ls aliases
 alias ll="ls -alF" 
 alias la="ls -A" 
 alias l="ls -CF"
 
+# custom app aliases
 alias aupdate="sudo bash -c 'apt update && apt list --upgradable'"
 alias afupgrade="sudo bash -c 'apt full-upgrade -y && apt autoremove -y --purge && apt autoclean'"
 alias nordvpn="sudo bash -c 'openvpn /etc/openvpn/ovpn_udp/us3175.nordvpn.com.udp.ovpn'"
