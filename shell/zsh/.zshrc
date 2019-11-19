@@ -116,6 +116,7 @@ plugins=(
   virtualenv
   zsh-navigation-tools
   zsh_reload
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -146,6 +147,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias sshconfig="vim ~/.ssh/config"
 
 # enable color support of ls / grep and also add handy aliases
 alias ls='ls --color=auto'
@@ -161,6 +163,9 @@ alias l="ls -CF"
 # custom app aliases
 alias aupdate="sudo bash -c 'apt update && apt list --upgradable'"
 alias afupgrade="sudo bash -c 'apt full-upgrade -y && apt autoremove -y --purge && apt autoclean'"
-alias nordvpn="sudo bash -c 'openvpn /etc/openvpn/ovpn_udp/us3175.nordvpn.com.udp.ovpn'"
+alias nordvpn="sudo bash -c 'openvpn /etc/openvpn/ovpn_udp/us3175.nordvpn.com.udp.ovpn' &"
 alias ovpnconn="sudo openvpn --config /etc/openvpn/client.ovpn"
+alias wally="$HOME/Documents/custom/ergodox/wally"
+
+alias talend="nohup $HOME/Documents/bee/tech/tools/db-tools/TOS_DI-20181026_1147-V7.1.1/TOS_DI-linux-gtk-x86_64 &"
 
