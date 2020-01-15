@@ -167,5 +167,10 @@ alias nordvpn="sudo bash -c 'openvpn /etc/openvpn/ovpn_udp/us3175.nordvpn.com.ud
 alias ovpnconn="sudo openvpn --config /etc/openvpn/client.ovpn"
 alias wally="$HOME/Documents/custom/ergodox/wally"
 
-alias talend="nohup $HOME/Documents/bee/tech/tools/db-tools/TOS_DI-20181026_1147-V7.1.1/TOS_DI-linux-gtk-x86_64 &"
+alias talend="nohup $HOME/Documents/bee/tech/tools/db-tools/tos_DI-20181026_1147-V7.1.1/TOS_DI-linux-gtk-x86_64 &"
+alias talend1="nohup $HOME/Documents/bee/tech/tools/db-tools/Talend/TOS_DI-20181026_1147-V7.1.1/TOS_DI-linux-gtk-x86_64 &"
+alias talend3="nohup $HOME/Documents/bee/tech/tools/db-tools/Talend/TOS_DI-20191031_1204-V7.3.1M3/TOS_DI-linux-gtk-x86_64 &"
+#alias myextip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+#alias ipxt=""treta="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+alias apti="sudo bash -c 'apt install -y'"
 
